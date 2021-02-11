@@ -12,12 +12,69 @@
     .special-effect:hover{
         color:indigo;
         background-color:goldenrod;
+        font-size: 20px;
     } 
+    input:focus{
+        font-size: 20px;
+        font-weight: 700;
+        color:indianred;
+        background-color: lawngreen;
+    }
+    .something:focus
+    {
+        color: lightpink;
+        background-color: limegreen;
+        font-size: 50px;
+    }
+    li:last-child{
+        color:maroon;
+        font-size: 20px;
+    }
+    li:nth-child(2n)
+    {
+        background-color: mediumslateblue;
+    }
+    li:nth-child(2n+1)
+    {
+        background-color: mediumvioletred;
+    }
+    a:visited
+    {
+        color:mediumblue;
+        font-size: 35px;
+    }
     </style>
 </head>
 <body>
-    <h1>first name</h1>
-    <h1>second name</h1>
-    <h1 class="special-effect">third name</h1>
-</body>
+    <h1>Introduce yourself</h1>
+    <h3 class="special-effect">Assalam walaikm every one.Hope you are pretty well.I am very much delighted to be here.thanks to my honourable teacher who give me this chance to introduce myself before you.</h3>
+    <h2>Well,my name is Farjana Abedin.My birthplace is Raozan.here,i live at Muradupur in Chittagong.As a person.
+    i am very extrovert.My hobby is teaching.My future dream is to be a teacher.</h2>
+ <form action="form_tag_get.php">
+    First name:<input name ="first" type="text">
+    <br>
+    second name: <input name="last" type="text">
+    <br>
+    Password: <input name="pasword" type="password">
+    <br>
+    email: <input name="email" type="email">
+    <br>
+    <input type="submit" value="submit">
+    <br>
+    Gender: <input type="button" name="gender" value="male">
+    <input type="button" name="gender" value="female">
+</form>
+    <br>
+    <a href="https://www.w3schools.com/tags/tag_input.asp">visited page</a>
+    <a href="https://www.youtube.com/watch?v=EH6vE97qIP4">youtube</a>
+    <ul>
+        <li>Mother</li>
+        <li>Father</li>
+        <li>Sister</li>
+        <li>Brother</li>
+        <li>Cousin</li>
+        <li>Grand father</li>
+        <li>Grand mother</li>
+    </ul>
+    </body>
 </html>
