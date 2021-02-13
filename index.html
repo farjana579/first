@@ -9,11 +9,20 @@
      h1{
          color:brown;
      } 
+     /*pseuo content*/
     .special-effect:hover{
         color:indigo;
         background-color:goldenrod;
         font-size: 20px;
     } 
+    .special-effect::after{
+        content:" let's start";
+        color: burlywood;
+    }
+    .special-effect::before{
+        content:"hey,guys. ";
+        color: chocolate;
+    }
     input:focus{
         font-size: 20px;
         font-weight: 700;
@@ -43,14 +52,27 @@
         color:mediumblue;
         font-size: 35px;
     }
+    /*css pseudo counter element using before after*/
+    body{
+    counter-reset: section;      /* Set section to 0 */
+    }
+     p::before {
+    counter-increment: section;
+    content:"Crush " counter(section) ": ";
+    }
+    .food::before{
+        content: "❤️ ";
+    }
     </style>
 </head>
 <body>
     <h1>Introduce yourself</h1>
-    <h3 class="special-effect">Assalam walaikm every one.Hope you are pretty well.I am very much delighted to be here.thanks to my honourable teacher who give me this chance to introduce myself before you.</h3>
+    <h3 class="special-effect">Assalam walaikm every one.Hope you are pretty well.
+    I am very much delighted to be here.thanks to my honourable teacher who give me this 
+    chance to introduce myself before you.</h3>
     <h2>Well,my name is Farjana Abedin.My birthplace is Raozan.here,i live at Muradupur in Chittagong.As a person.
     i am very extrovert.My hobby is teaching.My future dream is to be a teacher.</h2>
- <form action="form_tag_get.php">
+    <form action="form_tag_get.php">
     First name:<input name ="username" type="text">
     <br>
     second name: <input name="username" type="text">
@@ -65,6 +87,17 @@
     male <input type="radio" name="gender">
     female <input type="radio" name="gender">other
     <br>
+    Date of birth: <input type="date" name="dob">
+    <br>
+    Language: <input type="checkbox" name="language">English
+    <input type="checkbox" name="language">Bangla
+    <input type="checkbox" name="language">Arabic
+    <input type="checkbox" name="language">Korean
+    <input type="checkbox" name="language">Japanese
+    <br>
+    Time: <input type="time" name="subtime">
+    <br>
+    
     <input type="submit" value="submit">
     <br>
      
@@ -81,5 +114,18 @@
         <li>Grand father</li>
         <li>Grand mother</li>
     </ul>
+    <h3>current crush</h3>
+    <p>jimin</p>
+    <p>taehyung</p>
+    <p>j-hope</p>
+    <p>suga</p>
+    <p>namjoon</p>
+    <p>jin</p>
+     <h4>fav food</h4>
+     <p class="food">pasta</p>
+     <p class="food">chicken chap</p>
+     <p class="food">sandwich</p>
+     <p class="food" >chicken fry</p>
+     <p class="food">french fry</p>
     </body>
 </html>
